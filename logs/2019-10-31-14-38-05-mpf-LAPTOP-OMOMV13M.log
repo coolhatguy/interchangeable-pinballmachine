@@ -1,0 +1,33 @@
+2019-10-31 14:38:05,258 : INFO : Machine : Mission Pinball Framework Core Engine v0.52.7
+2019-10-31 14:38:05,258 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': False, 'configfile': ['config.yaml'], 'mpfconfigfile': 'c:\\users\\cocom\\appdata\\local\\programs\\python\\python36\\lib\\site-packages\\mpf\\mpfconfig.yaml', 'force_assets_load': False, 'jsonlogging': False, 'logfile': 'logs\\2019-10-31-14-38-05-mpf-LAPTOP-OMOMV13M.log', 'pause': False, 'production': False, 'text_ui': True, 'loglevel': 15, 'consoleloglevel': 20, 'force_platform': 'smart_virtual', 'syslog_address': None, 'mc_file_name': None, 'no_sound': False}
+2019-10-31 14:38:05,258 : INFO : Machine : MPF path: c:\users\cocom\appdata\local\programs\python\python36\lib\site-packages\mpf
+2019-10-31 14:38:05,258 : INFO : Machine : Machine path: C:\Users\cocom\Desktop\pinballproject\interchangeable-pinballmachine
+2019-10-31 14:38:05,258 : INFO : Machine : Platform: win32
+2019-10-31 14:38:05,258 : INFO : Machine : Python executable location: c:\users\cocom\appdata\local\programs\python\python36\python.exe
+2019-10-31 14:38:05,258 : INFO : Machine : Python version: 3.6.8 (64-bit)
+2019-10-31 14:38:05,258 : INFO : Machine : Machine config file #1: config.yaml
+2019-10-31 14:38:05,258 : WARNING : ConfigProcessor : Config file in cache changed: C:\Users\cocom\Desktop\pinballproject\interchangeable-pinballmachine\config\config.yaml
+2019-10-31 14:38:05,258 : INFO : ConfigProcessor : Loading config from file c:\users\cocom\appdata\local\programs\python\python36\lib\site-packages\mpf\mpfconfig.yaml.
+2019-10-31 14:38:05,352 : INFO : ConfigProcessor : Loading config: c:\users\cocom\appdata\local\programs\python\python36\lib\site-packages\mpf\mpfconfig.yaml
+2019-10-31 14:38:05,368 : INFO : ConfigProcessor : Loading config from file C:\Users\cocom\Desktop\pinballproject\interchangeable-pinballmachine\config\config.yaml.
+2019-10-31 14:38:05,383 : INFO : ConfigProcessor : Loading config: C:\Users\cocom\Desktop\pinballproject\interchangeable-pinballmachine\config\config.yaml
+2019-10-31 14:38:05,383 : ERROR : root : Found a "p3_roc:" section in config file C:\Users\cocom\Desktop\pinballproject\interchangeable-pinballmachine\config\config.yaml, but that section is not valid in machine config files.
+Traceback (most recent call last):
+  File "c:\users\cocom\appdata\local\programs\python\python36\lib\site-packages\mpf\core\config_processor.py", line 146, in _load_config_file_and_return_loaded_files
+    '__valid_in__']:
+KeyError: '__valid_in__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\cocom\appdata\local\programs\python\python36\lib\site-packages\mpf\commands\game.py", line 220, in __init__
+    MachineController(mpf_path, machine_path, vars(self.args)).run()
+  File "c:\users\cocom\appdata\local\programs\python\python36\lib\site-packages\mpf\core\machine.py", line 175, in __init__
+    self._load_config()
+  File "c:\users\cocom\appdata\local\programs\python\python36\lib\site-packages\mpf\core\machine.py", line 444, in _load_config
+    store_to_cache=self.options['create_config_cache'])
+  File "c:\users\cocom\appdata\local\programs\python\python36\lib\site-packages\mpf\core\config_processor.py", line 112, in load_config_files_with_cache
+    ignore_unknown_sections)
+  File "c:\users\cocom\appdata\local\programs\python\python36\lib\site-packages\mpf\core\config_processor.py", line 154, in _load_config_file_and_return_loaded_files
+    'files.'.format(k, filename, config_type))
+ValueError: Found a "p3_roc:" section in config file C:\Users\cocom\Desktop\pinballproject\interchangeable-pinballmachine\config\config.yaml, but that section is not valid in machine config files.

@@ -17,10 +17,10 @@ switches:
     s_right_flipper:
         number:
         tags: right_flipper
-    my_switch:
-        number: 0   # SW-16 board at address 0, Bank A, Switch 0
-    my_other_switch:
-        number: 45  # SW-16 board at address 2, Bank B, Switch 5
+    #my_switch:
+    #    number: 0   # SW-16 board at address 0, Bank A, Switch 0
+    #my_other_switch:
+    #    number: 45  # SW-16 board at address 2, Bank B, Switch 5
 
   
 # coils will also need numbers, these numbers are placeholders  

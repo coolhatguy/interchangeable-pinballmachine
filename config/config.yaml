@@ -1,0 +1,56 @@
+#config_version=5
+hardware:
+   platform: p3_roc
+   driverboards: pdb
+   
+p_roc:
+   use_watchdog: true
+   watchdog_time: 1s
+
+#code used to define what the flippers are
+#flippers will need numbers when a physical machine is finally implemented
+# http://docs.missionpinball.org/en/latest/hardware/numbers.html
+switches:
+    s_left_flipper:
+        number:
+        tags: left_flipper
+    s_right_flipper:
+        number:
+        tags: right_flipper
+    my_switch:
+        number: 0   # SW-16 board at address 0, Bank A, Switch 0
+    my_other_switch:
+        number: 45  # SW-16 board at address 2, Bank B, Switch 5
+
+  
+# coils will also need numbers, these numbers are placeholders  
+# yes and true are the same in MPF
+coils:
+    c_flipper_left_main:
+        number: 0  # again, these numbers will probably be different for you
+    c_flipper_left_hold:
+        number: 1  # check your platform-specific documentation for the actual numbers
+        allow_enable: true
+    c_flipper_right_main:
+        number: 2
+    c_flipper_right_hold:
+        number: 3
+        allow_enable: yes
+        
+playfields:
+    playfield:
+        tags: default
+        default_source_device: None  # use None in steps before 8
+
+# if we have single-wound coils then we don't need the hold_coil lines
+flippers:
+    left_flipper:
+        main_coil: c_flipper_left_main
+        hold_coil: c_flipper_left_hold
+        activation_switch: s_left_flipper
+        enable_events: machine_reset_phase_3
+    right_flipper:
+        main_coil: c_flipper_right_main
+        hold_coil: c_flipper_right_hold
+        activation_switch: s_right_flipper
+        enable_events: machine_reset_phase_3
